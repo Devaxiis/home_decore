@@ -3,9 +3,11 @@ import 'package:home_app/library.dart';
 import 'package:home_app/src/utils/app_screen_h_w.dart';
 
 class OnboardScreenWg extends StatelessWidget {
-  const OnboardScreenWg({super.key, required this.image});
+  const OnboardScreenWg({super.key, required this.image, required this.title, required this.description});
 
   final AssetImage image;
+  final String title;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +28,10 @@ class OnboardScreenWg extends StatelessWidget {
                     height: context.phoneHeight(),
                     alignment: Alignment.topCenter,
                     decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.only(bottomLeft: Radius.circular(40)),
-                        image: DecorationImage(
-                            image: image,
-                            fit: BoxFit.cover)),
+                        borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(40)),
+                        image:
+                            DecorationImage(image: image, fit: BoxFit.cover)),
                   ),
                 ),
               )),
@@ -38,6 +39,30 @@ class OnboardScreenWg extends StatelessWidget {
               flex: 2,
               child: Container(
                 color: AppColors.clFFFFFFWhite,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.clF4B5A4Salmon),
+                          textAlign: TextAlign.center,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 35,vertical: 20),
+                      child: Text(
+                        description,
+                        style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.cl363130Black),
+                            textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
               )),
         ],
       ),

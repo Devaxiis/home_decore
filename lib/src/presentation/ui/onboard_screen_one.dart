@@ -23,18 +23,27 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
       backgroundColor: AppColors.clFFFFFFWhite,
       body: PageView(
         controller: controller,
+        physics: NeverScrollableScrollPhysics(),
         children: const [
           OnboardScreenWg(
             image: AppImages.imgOnboardOne,
+            title: "Confortable Space",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
           ),
           OnboardScreenWg(
             image: AppImages.imgOnboardTwo,
+            title: "Modern Design",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
           ),
           OnboardScreenWg(
             image: AppImages.imgOnboardThree,
+            title: "Styled Living",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
           ),
           OnboardScreenWg(
             image: AppImages.imgOnboardFour,
+            title: "Relaxing Furniture",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
           ),
         ],
       ),
