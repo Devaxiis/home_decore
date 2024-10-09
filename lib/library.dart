@@ -7,6 +7,7 @@ export 'package:home_app/src/presentation/ui/splash_screen.dart';
 export 'package:flutter_dotenv/flutter_dotenv.dart';
 export 'package:home_app/app.dart';
 export 'package:home_app/src/utils/app_colors.dart';
+export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
 

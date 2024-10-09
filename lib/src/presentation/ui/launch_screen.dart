@@ -1,5 +1,5 @@
 import 'package:home_app/library.dart';
-import 'package:home_app/src/presentation/ui/onboard/onboard_screen_one.dart';
+import 'package:home_app/src/presentation/ui/onboard_screen_one.dart';
 
 class LaunchScreen extends StatelessWidget {
   const LaunchScreen({super.key});
