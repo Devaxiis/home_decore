@@ -1,11 +1,11 @@
-
+import 'package:flutter/gestures.dart';
 import 'package:home_app/library.dart';
 
 import 'package:home_app/src/config/app_typografy.dart';
 import 'package:home_app/src/presentation/ui/onboard_screen_one.dart';
+import 'package:home_app/src/presentation/ui/sign_up_screen.dart';
 import 'package:home_app/src/presentation/widgets/login_button_wg.dart';
 import 'package:home_app/src/presentation/widgets/login_screen_txtfild.dart';
-
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -54,12 +54,12 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 90,
             ),
             LoginScreenTxtfild(
-                title: "Username or email",
-                hinttitle: "example@example.com",
-                isHaveEye: false,
-                controller: controllerUsername,
-                isNumber: false,
-                ),
+              title: "Username or email",
+              hinttitle: "example@example.com",
+              isHaveEye: false,
+              controller: controllerUsername,
+              isNumber: false,
+            ),
             LoginScreenTxtfild(
               title: "Password",
               hinttitle: "********",
@@ -105,8 +105,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 10,
                   ),
                   RichText(
-                    text: const TextSpan(children: [
-                      TextSpan(
+                    text: TextSpan(children: [
+                      const TextSpan(
                         text: "Don’t have an account? ",
                         style: TextStyle(
                           fontFamily: "LS",
@@ -117,7 +117,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       TextSpan(
                         text: "Sign Up",
-                        style: TextStyle(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            context.onPush(const SignUpScreen());
+                          },
+                        style: const TextStyle(
                           fontFamily: "LS",
                           fontSize: 13,
                           fontWeight: FontWeight.w200,

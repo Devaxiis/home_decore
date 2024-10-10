@@ -64,7 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   isNumber: true,),
             LoginScreenTxtfild(
                   title: "Date of birth",
-                  hinttitle: "John",
+                  hinttitle: "12/23/2024",
                   isHaveEye: false,
                   controller: controllerDate,
                   isNumber: false,),
