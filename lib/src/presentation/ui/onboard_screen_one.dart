@@ -4,7 +4,6 @@ import 'package:home_app/src/presentation/ui/home_screen.dart';
 import 'package:home_app/src/presentation/widgets/onboard_b_nav_wg.dart';
 import 'package:home_app/src/presentation/widgets/onboard_screen_wg.dart';
 
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardScreenOne extends StatefulWidget {
   const OnboardScreenOne({super.key});
@@ -23,7 +22,7 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
       backgroundColor: AppColors.clFFFFFFWhite,
       body: PageView(
         controller: controller,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: const [
           OnboardScreenWg(
             image: AppImages.imgOnboardOne,
@@ -58,12 +57,10 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
             name = "Boshlash";
           }
           if (index == 4) {
-            context.onPushAndRemoveUntil(HomeScreen());
+            context.onPushAndRemoveUntil(const HomeScreen());
           }
           if (index < 5 && index > 0) {
-            controller.animateToPage(index++,
-                duration: const Duration(milliseconds: 700),
-                curve: Curves.linear);
+            controller.jumpToPage(index++);
           }
           setState(() {});
         },
