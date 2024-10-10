@@ -19,6 +19,7 @@ dependencies:
   flutter_animate: ^4.5.0
   smooth_page_indicator: ^1.2.0+3
   cherry_toast: ^1.11.0
+  mask_text_input_formatter: ^2.9.0
 
 dev_dependencies:
   flutter_test:

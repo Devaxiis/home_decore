@@ -1,3 +1,5 @@
+import 'package:home_app/src/presentation/widgets/login_button_wg.dart';
+
 import '../../../library.dart';
 
 class OnboardBNavWg extends StatelessWidget {
@@ -29,24 +31,7 @@ class OnboardBNavWg extends StatelessWidget {
                   dotHeight: 10,
                   dotWidth: 10),
             ),
-            InkWell(
-              onTap: () => onTab(),
-              child: Container(
-                height: 41,
-                width: 130,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    color: AppColors.clF4B5A4Salmon,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text(
-                  name,
-                  style: const TextStyle(
-                      fontSize: 20,
-                      color: AppColors.clCC7861Terracotta,
-                      fontWeight: FontWeight.w500),
-                ),
-              ),
-            ),
+            LoginButtonWg(title: name, onTab: ()=>onTab())
           ],
         ),
       ),

@@ -1,5 +1,7 @@
 import 'package:home_app/library.dart';
+import 'package:home_app/src/presentation/ui/login_screen.dart';
 import 'package:home_app/src/presentation/ui/onboard_screen_one.dart';
+import 'package:home_app/src/presentation/ui/sign_up_screen.dart';
 
 class LaunchScreen extends StatelessWidget {
   const LaunchScreen({super.key});
@@ -10,8 +12,8 @@ class LaunchScreen extends StatelessWidget {
         backgroundColor: AppColors.clFFFFFFWhite,
         body: Column(
           children: [
-            Spacer(),
-            Spacer(),
+            const Spacer(),
+            const Spacer(),
             SizedBox(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -21,7 +23,7 @@ class LaunchScreen extends StatelessWidget {
                     height: 175,
                     width: 250,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   const Padding(
@@ -35,12 +37,12 @@ class LaunchScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.onReplacement(OnboardScreenOne());
+                      context.onPush(const LoginScreen());
                     },
                     child: Container(
                       height: 45,
@@ -64,7 +66,7 @@ class LaunchScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.onReplacement(OnboardScreenOne());
+                      context.onPush(const SignUpScreen());
                     },
                     child: Container(
                       height: 45,
@@ -86,7 +88,7 @@ class LaunchScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
           ],
         ));
   }
