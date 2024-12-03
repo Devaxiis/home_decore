@@ -46,7 +46,7 @@ class _LoginScreenTxtfildState extends State<LoginScreenTxtfild> {
                     ? TextInputType.name
                     : TextInputType.emailAddress,
                 obscureText: widget.isHaveEye? !isVisable: false,
-                inputFormatters: widget.isNumber ?[AppInputFormatter.maskFormatter]:null,
+                inputFormatters: widget.isNumber ?[AppInputFormatter.maskFormat]:null,
                 decoration: InputDecoration(
                     hintText: widget.hinttitle,
                     hintStyle: AppTypografy.hintLIn,

@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
               isNumber: false,
             ),
             const SizedBox(
-              height: 80,
+              height: 100,
             ),
             Center(
                 child: LoginButtonWg(
@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
               "Forgot Password?",
               style: AppTypografy.forgotLIn,
             )),
-            const Spacer(),
+            SizedBox(height: 60,),
             SizedBox(
               height: 90,
               child: Column(

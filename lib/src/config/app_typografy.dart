@@ -39,4 +39,11 @@ class AppTypografy {
             fontWeight: FontWeight.w500,
             color: AppColors.cl363130Black
           );
+   /// Sign Up
+  static const textTermstitle = TextStyle(
+            fontFamily: "LS",
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+            color: AppColors.cl363130Black
+          );
 }
